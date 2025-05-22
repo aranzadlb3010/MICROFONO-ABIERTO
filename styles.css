@@ -1,0 +1,191 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bd8e8e;
+    padding-bottom: 60px; /* Espacio para el footer */
+}
+
+/* Menú de Navegación Fijo - Versión Mejorada */
+header {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1.5em;
+    background-color: #431111;
+}
+
+nav {
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(96, 137, 87) 112);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: #faf7f7;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    min-height: calc(100vh - 160px); /* Ajuste altura dinámica */
+    margin-top: 80px; /* Espacio para header */
+}
+
+/* Estilos para Equipo */
+.equipo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.987);
+    text-align: center;
+    max-width: 250px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilos para Línea de Tiempo */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.event {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #501818;
+    padding-left: 20px;
+}
+
+/* Estilos para el banner */
+.banner {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(56, 8, 8, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Imagen de fondo en la sección */
+.contenido {
+    text-align: center;
+    padding: 20px;
+    background: #3c5236;
+}
+
+.fondo {
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(209, 50, 50, 0.2);
+}
+
+/* Footer mejorado */
+footer {
+    background-color: #4407079b;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    border-top: 2px solid #3a5733;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.3em;
+        padding: 12px 15px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        min-height: calc(100vh - 200px);
+        margin-top: 120px;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+    
+    header h1 {
+        font-size: 1.1em;
+        padding: 10px;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
+}
